@@ -1,3 +1,10 @@
 language: java
-script: "mvn install"
+script: mvn install
 jdk: oraclejdk8
+deploy:
+  provider: releases
+  api_key:
+    secure: xVVN+PuANee0hS4An8v0nP1sxajuYW/Wv8UEYAm/sKpJKx0kv5codSpx7JEwQ+GoBhEUDMAtdHA8qCHhxPBCWqYjEQVzufgY2X83CCUS05W1rNpoQK0mfgsKZGHv4P5p3+B7Y07SyGgJ4drI4P46wh3jsES9CzASW7CqVlQ0WnnqYV9shqMXoutWh40xFD/QuT3fY7mR874mhTIbP+veQj0VOO3raHj2TZZH5eEr5KrnLn3XltQGnJk9qOtZ10F56bDgwB941DNUEarf1LIOMfooACJ0iGUqwaktZg5YvncQ2sXh4hKNG6o+1mRD17mCSscIXySByiTe5Y7sDgaasKvYhv8dcnsv2+qEJ4F6blg4Xx0Xzs5s0T3WnWHi3GquIfdUuuk8jXx0tvdxdB7letgV6Li/yiboHmzSMsA8PentuzghGkCu8gM4hKda3Hq09UMDNQ571QVlR0NaipwCztltGul6Njze98T5TP9Qo3xrckHGhr5nuwLIKCzcqFW/ct8FUYCzpi2W1QzWs3JPeFx7RdcLn1H3UErMVbchyE7k1NNva5XjMwcgA3zCzH2Ln4e1p8ctgEn/0xmwbANvxNp+y+yr6dtNnAuZ8iqQ/BILjiV/hy+80oqloS7BjOrp8jumqL1H0KIwSD4nOOFvHwXJk+J1ofWE5YWBlGRUIoo=
+  file: target/sonar-bitbucket-plugin-1.2.3.jar
+  on:
+    repo: matdube/sonar-bitbucket-plugin
